@@ -53,12 +53,13 @@ def game_states(game_state):
     # if game_state['active colour'] == 'w':
     
     # #have to correct still
-    # print(f"\n {'White' if game_state['active colour'] == 'w' else 'Black'} to move")
+    # print(f"\n{'White' if game_state['active_color'] == 'w' else 'Black'} to move")
     # print(f"{True: 'White to move', False: 'Black to move'} [game_state['active colour'] == 'w']")
     
     # Castling right try to use Ternary Operator
     castling = game_state['castling rights']
-
+    # if 'K' in castling or 'Q' in castling:
+    #print("White can castle", ("both sides" if 'K' in castling and 'Q' in castling else "king side" if 'K' in castling else "queen side"))
     if 'K' in castling and 'Q' in castling:
         print("White can castle both sides")
     elif 'K' in castling:
